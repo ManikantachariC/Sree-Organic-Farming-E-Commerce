@@ -1,0 +1,424 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;  /* Light beige for natural feel */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;  /* Main organic green */
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: #388E3C;  /* Accent green for hover effect */
+    border-radius: 5px;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('https://media2.themorningcontext.com/media/posts_images/1600x800_Natural_farming.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    /* padding: 10%; */
+    /* margin: 30%; */
+    background-attachment: fixed;
+    height: 80vh;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    /* position: fixed; */
+    /* bottom: 60%; */
+}
+
+.cta-button {
+    background-color: #FFEB3B;  /* Bright yellow for call-to-action */
+    color: white;
+    padding: 15px 30px;
+    /* margin: 10%; */
+    position: absolute;
+    bottom: 35%;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #F9C50B;  /* Darker yellow on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333333;  /* Dark footer to contrast */
+    color: white;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Products Section */
+#products {
+    padding: 40px 20px;
+    background-color: #F4F4F4;  /* Light background for product section */
+}
+
+#products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+.product img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1.2em;
+    color: #4CAF50;  /* Green text for price */
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;  /* Green for buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #388E3C;  /* Darker green for hover */
+}
+
+/* Cart Section */
+#cart {
+    padding: 40px 20px;
+    background-color: #F1F1F1;
+    height: 100vh;
+}
+
+#cart-items {
+    margin: 20px 0;
+}
+
+.cart-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.cart-item h3 {
+    flex: 1;
+    margin: 0;
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #4CAF50;  /* Green text for price */
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-control button:hover {
+    background-color: #388E3C;
+}
+
+.cart-item .remove-item {
+    background-color: #F44336;  /* Red for remove item */
+}
+
+.cart-item .remove-item:hover {
+    background-color: #E53935;  /* Darker red */
+}
+
+/* Payment Page */
+#payment {
+    padding: 40px 20px;
+}
+
+#payment h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.payment-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.payment-form input,
+.payment-form select,
+.payment-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.payment-form button {
+    background-color: #4CAF50;  /* Green for submit button */
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-form button:hover {
+    background-color: #388E3C;  /* Darker green on hover */
+}
+
+Contact Section
+#contact {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically if needed */
+    margin: 0 auto; /* To ensure it is centered within the parent container */
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+#contact p {
+    margin-bottom: 30px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align form elements in the center */
+    width: 100%; /* Ensure form width is not greater than the parent container */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px; /* Optional: Limit the width of each form group */
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left; /* Align label text to the left */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+
+/* // box/ */
+/* Full-page container */
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    height: 100vh;            
+    margin: 0;                
+    background-color: #f4f4f4; 
+
+/* Box styling */
+.box {
+    width: 80%;            
+    padding: 40px;            
+    background-color: white; 
+    border-radius: 8px;       
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    text-align: center;       
+}
+
+.box h2 {
+    margin-bottom: 15px;
+}
+
+.box p {
+    margin-bottom: 10px;
+}

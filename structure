@@ -1,0 +1,12 @@
+project-folder
+   index.html              # Home page
+    products.html           # Products listing page
+    cart.html               # Cart page
+    payment.php             # PHP script for payment (backend)
+    process_payment.php     # PHP script to process payment
+    about.html              # About Us page
+    contact.html            # Contact page
+    sql                    # Folder for SQL script
+    images                 # Folder for product images (optional)
+    script.js               # JavaScript for cart functionality
+    style.css               # CSS stylesheet
